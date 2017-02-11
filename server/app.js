@@ -9,11 +9,9 @@ let bodyParser = require('body-parser');
 let mongoose = require('mongoose');
 
 // URI
-let URI = "mongodb://localhost/videogames";
-//let URI = "mongodb://selina:123456@ds054999.mlab.com:54999/sdmd-videogames";
-//mongodb://<dbuser>:<dbpassword>@ds054999.mlab.com:54999/sdmd-videogames
+let config = require('./config/db');
 
-mongoose.connect(URI);
+mongoose.connect(config.URI);
 
 let db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
@@ -35,7 +33,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '../client')));
 
 app.use('/', index);
 
