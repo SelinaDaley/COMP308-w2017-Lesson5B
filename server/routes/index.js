@@ -7,7 +7,8 @@ let game = require('../models/games');
 /* GET home page. wildcard */
 router.get('/', (req, res, next) => {
   res.render('content/index', {
-    title: 'Home'
+    title: 'Home',
+    games: ''
    });
 });
 
@@ -16,7 +17,8 @@ router.get('/', (req, res, next) => {
 /* GET contact page. */
 router.get('/contact', (req, res, next) => {
   res.render('content/contact', {
-    title: 'Contact'
+    title: 'Contact',
+    games: ''
    });
 });
 

@@ -21,7 +21,10 @@
   },
   "description": "Lesson 5 - Full CRUD with MongoDB and Mongoose",
   "main": "server.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "@types/jquery": "^2.0.40",
+    "@types/node": "^7.0.5"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SelinaDaley/COMP308-w2017-Lesson5B.git"
